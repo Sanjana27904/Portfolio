@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sanjana Madishetti">
+  <meta name="description" content="Portfolio of Sanjana Madishetti - Junior Developer specializing in AI-Assisted Engineering, NLP, Spring Boot, FastAPI, and React.js.">
+  <title>Sanjana Madishetti | Portfolio - Junior Developer & AI Engineer</title>
+  
+  <!-- Tailwind CSS with dual CDN fallback -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      const s = document.createElement('script');
+      s.src = 'https://cdn.tailwindcss.com';
+      document.head.appendChild(s);
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-glow: rgba(168, 85, 247, 0.45);
+      --secondary-glow: rgba(99, 102, 241, 0.35);
+      --card-bg: rgba(20, 15, 42, 0.72);
+      --card-border: rgba(255, 255, 255, 0.1);
+    }
+    * {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    body {
+      background-color: #0b0819;
+      color: #f1f5f9;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0819;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2b1f50;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7c3aed;
+    }
+
+    /* Background Spotlight Halo (Image 1 Signature Element) */
+    .spotlight-halo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.45) 0%, rgba(99, 102, 241, 0.28) 42%, rgba(11, 8, 25, 0) 72%);
+      filter: blur(45px);
+      z-index: 0;
+      pointer-events: none;
+      animation: pulseAura 9s ease-in-out infinite alternate;
+    }
+    @keyframes pulseAura {
+      0% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.7; }
+      50% { transform: translate(-50%, -50%) scale(1.08); opacity: 0.95; }
+      100% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.8; }
+    }
+
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .glass-card {
+      background: rgba(20, 15, 42, 0.72);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(168, 85, 247, 0.4);
+      box-shadow: 0 25px 60px rgba(139, 92, 246, 0.2);
+    }
+    .glow-button {
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.45);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glow-button:hover {
+      box-shadow: 0 0 38px rgba(168, 85, 247, 0.75);
+      transform: translateY(-2px);
+    }
+    .glow-button-white {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glow-button-white:hover {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+      transform: translateY(-2px);
+    }
+    .mouse-wheel {
+      animation: wheelMove 2.2s infinite ease-in-out;
+    }
+    @keyframes wheelMove {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(9px); opacity: 0.25; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .modal-backdrop {
+      background: rgba(8, 5, 20, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+  </style>
+</head>
+<body class="bg-[#0b0819] text-slate-100 selection:bg-purple-500 selection:text-white antialiased">
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3 sm:py-4 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo Mark (Reference Image 1: 'SM' Brand Emblem) -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl glass-pill flex items-center justify-center font-display font-black text-xl text-white border border-purple-400/40 group-hover:border-purple-400 transition-all duration-300 shadow-[0_0_18px_rgba(168,85,247,0.35)]">
+          SM
+        </div>
+        <div>
+          <span class="font-display font-black text-lg tracking-wide text-white block leading-tight">SANJANA MADISHETTI</span>
+          <span class="block text-[10px] font-semibold tracking-widest uppercase text-purple-300/80">Software Engineer</span>
+        </div>
+      </a>
+
+      <!-- Center Pill Navigation (Reference Image 1) -->
+      <nav class="hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full glass-pill border border-white/10 shadow-lg shadow-purple-950/20 text-sm font-medium">
+        <a href="#hero" class="nav-item px-4 py-1.5 rounded-full text-white bg-white/10 font-semibold transition-all duration-200">Home</a>
+        <a href="#about" class="nav-item px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">About</a>
+        <a href="#projects" class="nav-item px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Projects</a>
+        <a href="#skills" class="nav-item px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Skills</a>
+        <a href="#education" class="nav-item px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Education</a>
+        <a href="#contact" class="nav-item px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Contact</a>
+      </nav>
+
+      <!-- Right Header Controls -->
+      <div class="flex items-center gap-2.5">
+        
+        <!-- LINKEDIN PROFILE BUTTON (Requested at top) -->
+        <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass-pill text-xs font-semibold text-blue-300 hover:text-white border border-blue-400/40 hover:border-blue-400 transition-all shadow-[0_0_12px_rgba(59,130,246,0.3)] bg-blue-950/20">
+          <svg class="w-3.5 h-3.5 fill-current text-blue-400" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          <span class="hidden sm:inline">LinkedIn</span>
+        </a>
+
+        <!-- Interactive Avatar Switcher in Navbar -->
+        <button id="avatarToggleNavBtn" onclick="toggleAvatarMode()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full glass-pill text-xs font-semibold text-purple-200 border border-purple-400/25 hover:border-purple-400/60 transition-all duration-200" title="Click to toggle between 3D AI Avatar & Real Photo">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="navAvatarText">✨ 3D Avatar</span>
+        </button>
+
+        <!-- GitHub Profile Link -->
+        <a href="https://github.com/Sanjana27904" target="_blank" rel="noopener noreferrer" class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-pill text-xs font-semibold text-slate-300 hover:text-white border border-white/10 hover:border-purple-400/50 transition-all">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <span>GitHub</span>
+        </a>
+
+        <!-- Download CV Action Button (Reference Image 1) -->
+        <button onclick="openResumeModal()" class="px-4 py-2 rounded-full bg-white text-slate-950 font-extrabold text-xs uppercase tracking-wider glow-button-white hover:bg-slate-100 transition-all duration-200 flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>CV</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-xl glass-pill flex items-center justify-center text-slate-200 hover:text-white border border-white/10" aria-label="Toggle menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden max-w-7xl mx-auto mt-3 p-4 rounded-2xl glass-card border border-white/10 flex flex-col gap-2 text-sm font-medium">
+      <a href="#hero" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-white/10">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-white/10">About Me</a>
+      <a href="#projects" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-white/10">Projects (4 Deployed Builds)</a>
+      <a href="#skills" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-white/10">Skills</a>
+      <a href="#education" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-white/10">Education & Certifications</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-white/10">Contact</a>
+      <div class="pt-2 border-t border-white/10 flex justify-between items-center">
+        <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="text-xs text-blue-400 font-bold py-1">LinkedIn Profile ↗</a>
+        <button onclick="openResumeModal()" class="text-xs bg-white text-slate-900 font-bold px-3.5 py-1.5 rounded-full">Download Resume</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (Design Reference 1 + 2 Fusion) ==================== -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-between pt-24 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    
+    <!-- Ambient Backdrop Halo & Cosmic Glows -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="spotlight-halo"></div>
+      <div class="absolute top-1/4 left-10 w-80 h-80 rounded-full bg-purple-900/25 blur-[120px]"></div>
+      <div class="absolute bottom-1/4 right-10 w-96 h-96 rounded-full bg-indigo-900/30 blur-[140px]"></div>
+    </div>
+
+    <!-- Hero Main Grid: Left Column, Center Character Spotlight, Right Column -->
+    <div class="relative z-10 max-w-7xl mx-auto w-full my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-6">
+      
+      <!-- LEFT COLUMN: Headline & CTAs (Reference Image 1) -->
+      <div class="lg:col-span-4 text-center lg:text-left flex flex-col items-center lg:items-start order-2 lg:order-1">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-purple-400/30 text-purple-300 text-xs font-semibold mb-5 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+          <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
+          <span>Junior Developer • AI-Assisted Engineering</span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.08] mb-5">
+          Welcome <br class="hidden sm:inline">to my <span class="bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300 bg-clip-text text-transparent">portfolio</span>
+        </h1>
+
+        <p class="text-slate-300/90 text-sm sm:text-base leading-relaxed mb-8 max-w-md font-normal">
+          Hi, I'm <strong class="text-white font-semibold">Sanjana Madishetti</strong> — Computer Science Engineering graduate building real-world AI applications with <span class="text-white font-semibold">LLM integration, React.js, FastAPI, Spring Boot, Streamlit, and NLP algorithms</span>.
+        </p>
+
+        <!-- CTA Buttons (Image 1 style) -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
+          <a href="#projects" class="px-7 py-3 rounded-full bg-white text-slate-950 font-extrabold text-sm tracking-wide glow-button-white hover:bg-slate-100 transition-all duration-300 flex items-center gap-2">
+            <span>Explore Projects</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full glass-pill text-blue-300 hover:text-white font-semibold text-sm border border-blue-400/30 hover:border-blue-400/70 hover:bg-blue-600/10 transition-all duration-300 flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current text-blue-400" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <span>Connect on LinkedIn</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CENTER COLUMN: Avatar & Spotlight Glow (Reference Image 1 & 2) -->
+      <div class="lg:col-span-4 flex flex-col items-center justify-center order-1 lg:order-2 my-4 lg:my-0">
+        
+        <div class="relative w-72 sm:w-84 xl:w-96 flex flex-col items-center">
+          
+          <!-- Backlit Glow Aura -->
+          <div class="absolute inset-0 rounded-full bg-gradient-to-t from-purple-600/35 to-indigo-500/25 blur-2xl transform scale-110 pointer-events-none"></div>
+
+          <!-- Avatar Image Container with Floating Ring -->
+          <div class="relative z-10 w-64 h-80 sm:w-76 sm:h-96 rounded-[36px] overflow-hidden glass-card border-2 border-purple-400/40 shadow-[0_25px_65px_rgba(10,7,25,0.9)] transition-all duration-500 group">
+            
+            <!-- AI Avatar Image -->
+            <img id="avatarImage" src="assets/avatar.jpg" alt="Sanjana Madishetti - AI Avatar" class="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105">
+            
+            <!-- Real Photo Image (Toggled on click) -->
+            <img id="realPhotoImage" src="assets/sanjana_photo.jpg" alt="Sanjana Madishetti - Photograph" class="hidden w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105">
+
+            <!-- Glowing rim highlight overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0b0819] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full glass-pill border border-white/15 text-[11px] font-bold text-white shadow-md">
+              <span id="avatarBadgeLabel">✨ 3D Avatar</span>
+            </div>
+          </div>
+
+          <!-- Avatar Mode Switcher Pill (Interactive Choice) -->
+          <div class="relative z-20 mt-4 inline-flex items-center p-1 rounded-full glass-pill border border-white/15 shadow-xl">
+            <button id="btnAiAvatar" onclick="setAvatarMode('ai')" class="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 bg-purple-600 text-white shadow-[0_0_14px_rgba(168,85,247,0.5)]">
+              ✨ 3D Avatar
+            </button>
+            <button id="btnRealPhoto" onclick="setAvatarMode('real')" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200">
+              📷 Real Photo
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: About Me Card & Download CV (Reference Image 1) -->
+      <div class="lg:col-span-4 flex flex-col items-center lg:items-start order-3 text-center lg:text-left">
+        
+        <div class="w-full max-w-md p-6 sm:p-7 rounded-3xl glass-card border border-white/10 shadow-2xl relative overflow-hidden">
+          
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">About me</h2>
+            <span class="w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)]"></span>
+          </div>
+
+          <p class="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+            B.Tech Computer Science graduate from <span class="text-white font-medium">Malla Reddy University</span> (CGPA: 9.2/10). Strong foundation in Java, Python, and SQL, with hands-on experience building conversational AI assistants, offline cryptographic payment systems, and NLP applications.
+          </p>
+
+          <!-- Key Metrics Badges -->
+          <div class="grid grid-cols-3 gap-2 py-3 px-4 rounded-2xl bg-white/5 border border-white/5 mb-6 text-center">
+            <div>
+              <div class="font-display font-black text-xl text-purple-300">9.2</div>
+              <div class="text-[10px] uppercase font-bold text-slate-400">B.Tech CGPA</div>
+            </div>
+            <div class="border-x border-white/10">
+              <div class="font-display font-black text-xl text-pink-300">9.8</div>
+              <div class="text-[10px] uppercase font-bold text-slate-400">Inter CGPA</div>
+            </div>
+            <div>
+              <div class="font-display font-black text-xl text-indigo-300">4+</div>
+              <div class="text-[10px] uppercase font-bold text-slate-400">Flagship Apps</div>
+            </div>
+          </div>
+
+          <!-- Download CV Action (Reference Image 1: White pill button with glow) -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button onclick="openResumeModal()" class="w-full py-3 px-6 rounded-full bg-white text-slate-950 font-extrabold text-sm tracking-wide glow-button-white hover:bg-slate-100 transition-all duration-300 flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>Download CV</span>
+            </button>
+            <a href="assets/Sanjana_Madishetti_Resume.pdf" download="Sanjana_Madishetti_Resume.pdf" class="sm:w-auto p-3 rounded-full glass-pill border border-white/20 text-slate-200 hover:text-white hover:border-purple-400 transition-all duration-200 flex items-center justify-center" title="Direct PDF Download">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM HERO FOOTER STRIP (Reference Image 1) -->
+    <div class="relative z-10 max-w-7xl mx-auto w-full pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      
+      <!-- Copyright text (Image 1 bottom left) -->
+      <div class="order-2 md:order-1 text-center md:text-left">
+        <span class="text-slate-400 font-medium">@2026 Sanjana Madishetti all right reserved</span>
+      </div>
+
+      <!-- Mouse Scroll Indicator (Image 1 bottom center) -->
+      <a href="#contentIndex" class="order-1 md:order-2 flex flex-col items-center gap-1.5 text-slate-400 hover:text-purple-300 transition-colors group">
+        <div class="w-5 h-9 rounded-full border-2 border-slate-500 group-hover:border-purple-400 flex items-start justify-center p-1 transition-colors">
+          <div class="w-1.5 h-2 rounded-full bg-purple-400 mouse-wheel"></div>
+        </div>
+        <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-500 group-hover:text-purple-400">Scroll</span>
+      </a>
+
+      <!-- Social Media Icons (Image 1 bottom right: LinkedIn, GitHub, Email, Phone) -->
+      <div class="order-3 flex items-center gap-2.5">
+        <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-blue-600/80 hover:bg-blue-600 flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm" title="LinkedIn: Sanjana Madishetti">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://github.com/Sanjana27904" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 border border-white/20 flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm" title="GitHub: @Sanjana27904">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a href="mailto:sanjanamadishetti27@gmail.com" class="w-8 h-8 rounded-full bg-pink-600/80 hover:bg-pink-600 flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm" title="Send Email">
+          <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+        <a href="tel:+918309716327" class="w-8 h-8 rounded-full bg-emerald-600/80 hover:bg-emerald-600 flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm" title="Call Sanjana">
+          <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ==================== CONTENT INDEX (Reference Image 2 'CONTENT 01 02 03 04 05') ==================== -->
+  <section id="contentIndex" class="py-10 px-4 sm:px-6 lg:px-8 border-y border-white/5 bg-[#0e0a21]/60">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-4">
+        <span class="font-display font-black text-2xl text-purple-400">CONTENT</span>
+        <span class="h-4 w-[1px] bg-white/20"></span>
+        <span class="text-xs uppercase font-semibold tracking-widest text-slate-400">Architecture & Sections</span>
+      </div>
+
+      <div class="grid grid-cols-5 gap-3 sm:gap-6 text-center">
+        <a href="#about" class="group flex flex-col items-center">
+          <span class="font-display font-black text-xl sm:text-2xl text-slate-400 group-hover:text-purple-300 transition-colors">01</span>
+          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-500 group-hover:text-white transition-colors">About</span>
+        </a>
+        <a href="#skills" class="group flex flex-col items-center">
+          <span class="font-display font-black text-xl sm:text-2xl text-slate-400 group-hover:text-purple-300 transition-colors">02</span>
+          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-500 group-hover:text-white transition-colors">Skills</span>
+        </a>
+        <a href="#projects" class="group flex flex-col items-center">
+          <span class="font-display font-black text-xl sm:text-2xl text-purple-400 group-hover:text-purple-300 transition-colors">03</span>
+          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-300 group-hover:text-white transition-colors">Projects</span>
+        </a>
+        <a href="#education" class="group flex flex-col items-center">
+          <span class="font-display font-black text-xl sm:text-2xl text-slate-400 group-hover:text-purple-300 transition-colors">04</span>
+          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-500 group-hover:text-white transition-colors">Education</span>
+        </a>
+        <a href="#contact" class="group flex flex-col items-center">
+          <span class="font-display font-black text-xl sm:text-2xl text-slate-400 group-hover:text-purple-300 transition-colors">05</span>
+          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-500 group-hover:text-white transition-colors">Contact</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION (01 INTRODUCTION) ==================== -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-display font-black text-purple-400 text-sm tracking-widest uppercase">01 // INTRODUCTION</span>
+        <span class="h-[1px] w-12 bg-purple-500/50"></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <div class="lg:col-span-7">
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">
+  Building practical software. Exploring intelligent AI. Turning ideas into <span class="text-purple-400">working applications</span>.
+</h2>
+
+          
+<div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+  <p>
+    I'm <strong class="text-white">Sanjana Madishetti</strong>, a Computer Science Engineering graduate passionate about software development and AI-powered solutions. With a strong foundation in <strong class="text-white">Java, Python, SQL, and Object-Oriented Programming</strong>, I enjoy solving problems and building applications that combine solid engineering fundamentals with intelligent technologies.
+  </p>
+  <p>
+    My projects span <strong class="text-white">LLM-powered conversational applications, secure offline payment simulations, AI-based public issue resolution, and sentiment analysis dashboards</strong>. Through these projects, I've gained hands-on experience with technologies including <strong class="text-white">Spring Boot, React.js, FastAPI, Streamlit, and LLM integration</strong>.
+  </p>
+  <p>
+    I also use <strong class="text-white">ChatGPT, Claude, and Antigravity</strong> to explore ideas, accelerate development, troubleshoot code, and refine features. I'm always looking to learn, experiment with new technologies, and turn challenging problems into practical, working solutions.
+  </p>
+</div>
+
+
+          <!-- Highlight Badges -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="p-3.5 rounded-2xl glass-card border border-white/5">
+              <div class="text-purple-400 font-bold text-xs uppercase mb-1">Education</div>
+              <div class="text-white font-bold text-sm">B.Tech in CSE</div>
+              <div class="text-slate-400 text-xs">Malla Reddy Univ (9.2 CGPA)</div>
+            </div>
+            <div class="p-3.5 rounded-2xl glass-card border border-white/5">
+              <div class="text-pink-400 font-bold text-xs uppercase mb-1">Specialization</div>
+              <div class="text-white font-bold text-sm">AI, Backend & NLP</div>
+              <div class="text-slate-400 text-xs">LLMs, Spring Boot, FastAPI, Streamlit</div>
+            </div>
+            <div class="p-3.5 rounded-2xl glass-card border border-white/5 col-span-2 sm:col-span-1">
+              <div class="text-blue-400 font-bold text-xs uppercase mb-1">Network</div>
+              <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="text-white font-bold text-sm hover:underline block">LinkedIn Profile ↗</a>
+              <div class="text-slate-400 text-xs">Open for Collaboration</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Quick Card: Profile & Direct Details -->
+        <div class="lg:col-span-5 p-7 rounded-3xl glass-card border border-white/10 relative">
+          <div class="text-xs uppercase font-bold tracking-widest text-slate-400 mb-4 flex items-center justify-between">
+            <span>Direct Profile Card</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-400 animate-ping"></span>
+          </div>
+
+          <div class="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden border border-purple-400/40">
+              <img id="aboutMiniAvatar" src="assets/avatar.jpg" alt="Sanjana Madishetti" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-white">Sanjana Madishetti</h3>
+              <p class="text-purple-300 text-xs font-medium">Junior Software Engineer</p>
+              <p class="text-slate-400 text-xs">Hyderabad, Telangana, India</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+              <span class="text-slate-400">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="text-blue-400 hover:text-white font-medium">linkedin.com/in/sanjana-madishetti...</a>
+            </div>
+            <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+              <span class="text-slate-400">GitHub:</span>
+              <a href="https://github.com/Sanjana27904" target="_blank" class="text-purple-300 hover:text-white font-medium">github.com/Sanjana27904</a>
+            </div>
+            <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+              <span class="text-slate-400">Email:</span>
+              <a href="mailto:sanjanamadishetti27@gmail.com" class="text-purple-300 hover:text-white font-medium">sanjanamadishetti27@gmail.com</a>
+            </div>
+            <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+              <span class="text-slate-400">Phone:</span>
+              <a href="tel:+918309716327" class="text-purple-300 hover:text-white font-medium">+91 8309716327</a>
+            </div>
+            <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+              <span class="text-slate-400">Core Languages:</span>
+              <span class="text-white font-medium">Java, Python, SQL, JavaScript</span>
+            </div>
+            <div class="flex items-center justify-between py-1.5">
+              <span class="text-slate-400">Status:</span>
+              <span class="text-emerald-400 font-semibold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Ready for Opportunities
+              </span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10 flex gap-2">
+            <button onclick="openResumeModal()" class="flex-1 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs uppercase tracking-wider glow-button transition-all">
+              Resume Modal
+            </button>
+            <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center">
+              LinkedIn
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION (02 TECH STACK) ==================== -->
+  <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#090615]/70 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-display font-black text-purple-400 text-sm tracking-widest uppercase">02 // TECH STACK & COMPETENCIES</span>
+        <span class="h-[1px] w-12 bg-purple-500/50"></span>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Technical Proficiency
+          </h2>
+          <p class="text-slate-400 text-sm mt-2">Comprehensive stack covering AI engineering, NLP algorithms, backend microservices, and interactive dashboards.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-2" id="skillFilterTabs">
+          <button onclick="filterSkills('all')" class="skill-tab active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purple-600 text-white">All</button>
+          <button onclick="filterSkills('ai')" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-semibold glass-pill text-slate-300 hover:text-white">AI, LLMs & NLP</button>
+          <button onclick="filterSkills('backend')" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-semibold glass-pill text-slate-300 hover:text-white">Languages & Web</button>
+          <button onclick="filterSkills('db')" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-semibold glass-pill text-slate-300 hover:text-white">Databases & Cloud</button>
+          <button onclick="filterSkills('cs')" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-semibold glass-pill text-slate-300 hover:text-white">Core CS</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skillsGrid">
+        
+        <div class="skill-card p-6 rounded-3xl glass-card border border-white/10" data-cat="ai">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="text-[11px] font-bold text-purple-300 uppercase tracking-wider">High Focus</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">AI, LLMs & NLP</h3>
+          <p class="text-slate-400 text-xs mb-4">Integrating generative models, NLP sentiment pipelines, and automated text classification.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/40 border border-purple-400/30 text-purple-200 text-xs">LLM Integration</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/40 border border-purple-400/30 text-purple-200 text-xs">NLP (TF-IDF & NLTK)</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/40 border border-purple-400/30 text-purple-200 text-xs">TextBlob Sentiment</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/40 border border-purple-400/30 text-purple-200 text-xs">Groq API</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/40 border border-purple-400/30 text-purple-200 text-xs">Prompt Engineering</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/40 border border-purple-400/30 text-purple-200 text-xs">AI-Assisted Coding</span>
+          </div>
+        </div>
+
+        <div class="skill-card p-6 rounded-3xl glass-card border border-white/10" data-cat="backend">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-indigo-600/30 border border-indigo-400/40 flex items-center justify-center text-indigo-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <span class="text-[11px] font-bold text-indigo-300 uppercase tracking-wider">Foundation</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Programming Languages</h3>
+          <p class="text-slate-400 text-xs mb-4">Strong grounding in Object-Oriented programming, data processing, and scripting.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-indigo-900/40 border border-indigo-400/30 text-indigo-200 text-xs">Java (Certified)</span>
+            <span class="px-2.5 py-1 rounded-lg bg-indigo-900/40 border border-indigo-400/30 text-indigo-200 text-xs">Python</span>
+            <span class="px-2.5 py-1 rounded-lg bg-indigo-900/40 border border-indigo-400/30 text-indigo-200 text-xs">SQL</span>
+            <span class="px-2.5 py-1 rounded-lg bg-indigo-900/40 border border-indigo-400/30 text-indigo-200 text-xs">JavaScript (ES6+)</span>
+          </div>
+        </div>
+
+        <div class="skill-card p-6 rounded-3xl glass-card border border-white/10" data-cat="backend">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-pink-600/30 border border-pink-400/40 flex items-center justify-center text-pink-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <span class="text-[11px] font-bold text-pink-300 uppercase tracking-wider">Full Stack</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Web & Dashboard Frameworks</h3>
+          <p class="text-slate-400 text-xs mb-4">RESTful microservices, interactive data apps, and responsive single-page interfaces.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-pink-900/40 border border-pink-400/30 text-pink-200 text-xs">Spring Boot</span>
+            <span class="px-2.5 py-1 rounded-lg bg-pink-900/40 border border-pink-400/30 text-pink-200 text-xs">FastAPI</span>
+            <span class="px-2.5 py-1 rounded-lg bg-pink-900/40 border border-pink-400/30 text-pink-200 text-xs">React.js</span>
+            <span class="px-2.5 py-1 rounded-lg bg-pink-900/40 border border-pink-400/30 text-pink-200 text-xs">Streamlit</span>
+            <span class="px-2.5 py-1 rounded-lg bg-pink-900/40 border border-pink-400/30 text-pink-200 text-xs">Plotly Analytics</span>
+            <span class="px-2.5 py-1 rounded-lg bg-pink-900/40 border border-pink-400/30 text-pink-200 text-xs">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card p-6 rounded-3xl glass-card border border-white/10" data-cat="db">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-cyan-600/30 border border-cyan-400/40 flex items-center justify-center text-cyan-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+            </div>
+            <span class="text-[11px] font-bold text-cyan-300 uppercase tracking-wider">Persistence</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Databases & Cloud Deployment</h3>
+          <p class="text-slate-400 text-xs mb-4">Database modeling, containerization, and modern cloud deployment platforms.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">MySQL</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">Firebase</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">Docker</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">Render Cloud</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">Vercel</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-200 text-xs">AWS Cloud Fund.</span>
+          </div>
+        </div>
+
+        <div class="skill-card p-6 rounded-3xl glass-card border border-white/10" data-cat="cs">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-amber-600/30 border border-amber-400/40 flex items-center justify-center text-amber-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <span class="text-[11px] font-bold text-amber-300 uppercase tracking-wider">Theory</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Core CS Fundamentals</h3>
+          <p class="text-slate-400 text-xs mb-4">Solid theoretical base from curriculum and practical problem-solving.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-900/40 border border-amber-400/30 text-amber-200 text-xs">Data Structures & Algo</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-900/40 border border-amber-400/30 text-amber-200 text-xs">OOP Principles</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-900/40 border border-amber-400/30 text-amber-200 text-xs">DBMS</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-900/40 border border-amber-400/30 text-amber-200 text-xs">Computer Networks</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-900/40 border border-amber-400/30 text-amber-200 text-xs">SDLC Methodologies</span>
+          </div>
+        </div>
+
+        <div class="skill-card p-6 rounded-3xl glass-card border border-white/10" data-cat="ai">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-600/30 border border-emerald-400/40 flex items-center justify-center text-emerald-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <span class="text-[11px] font-bold text-emerald-300 uppercase tracking-wider">Quality</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Data Processing & Quality</h3>
+          <p class="text-slate-400 text-xs mb-4">Schema verification, document parsing, and collaborative teamwork.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-900/40 border border-emerald-400/30 text-emerald-200 text-xs">Pandas & NumPy</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-900/40 border border-emerald-400/30 text-emerald-200 text-xs">Pydantic Schemas</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-900/40 border border-emerald-400/30 text-emerald-200 text-xs">PyPDF Parsing</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-900/40 border border-emerald-400/30 text-emerald-200 text-xs">Analytical Thinking</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-900/40 border border-emerald-400/30 text-emerald-200 text-xs">Technical Docs</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED PROJECTS (03 PROJECTS) ==================== -->
+  <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-display font-black text-purple-400 text-sm tracking-widest uppercase">03 // FEATURED ENGINEERING PROJECTS</span>
+        <span class="h-[1px] w-12 bg-purple-500/50"></span>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div>
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Production-Grade & Deployed Builds
+          </h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-xl">
+            Selected projects demonstrating AI/LLM integration, NLP algorithms, cryptographic offline payments, and interactive analytics.
+          </p>
+        </div>
+        <a href="https://github.com/Sanjana27904?tab=repositories" target="_blank" class="px-4 py-2 rounded-full glass-pill text-xs font-bold uppercase tracking-wider text-purple-300 hover:text-white border border-purple-400/30 hover:border-purple-400 transition-all flex items-center gap-2 self-start md:self-auto">
+          <span>View All on GitHub</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+      <!-- Project Cards Grid: 4 Flagship Projects -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- ================= PROJECT 1: REFLEKT AI (REQUESTED: SHOW GITHUB LINK INSTEAD OF LIVE DEPLOY) ================= -->
+        <div class="glass-card rounded-[32px] p-7 sm:p-9 border border-white/10 hover:border-purple-400/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-purple-600/30 border border-purple-400/40 text-purple-300 text-xs font-bold uppercase tracking-wider">
+                🤖 AI & LLM Integration
+              </span>
+              <span class="text-xs text-purple-300 font-mono font-semibold">
+                FastAPI • Groq LLM • React
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-purple-300 transition-colors mb-3">
+              Reflekt AI – AI-Powered Resume Assistant
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+              An intelligent conversational assistant empowering recruiters to query candidate skills, projects, and career milestones in natural language, eliminating manual scanning fatigue.
+            </p>
+
+            <div class="space-y-2.5 mb-7 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="text-purple-400 shrink-0">▹</span>
+                <span>FastAPI backend with <strong class="text-white">Groq LLM API</strong> for sub-second, context-aware resume querying.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-purple-400 shrink-0">▹</span>
+                <span>Automated extraction pipeline with <strong class="text-white">PyPDF</strong> and <strong class="text-white">Pydantic</strong> schema validation.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-purple-400 shrink-0">▹</span>
+                <span>Modular React.js client interface with conversational query streaming.</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Python</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">FastAPI</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Groq LLM API</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">React.js</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">PyPDF</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Pydantic</span>
+            </div>
+          </div>
+
+          <!-- Reflekt AI Actions: Primary is GitHub link -->
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+            <a href="https://github.com/Sanjana27904/Reflekt-AI" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs uppercase tracking-wider glow-button transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              <span>GitHub Repository</span>
+            </a>
+            <button onclick="openProjectModal('reflekt')" class="px-4 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-semibold">
+              Architecture Specs
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PROJECT 2: UPI MESHPAY (REQUESTED: DEPLOYED ON RENDER LINK) ================= -->
+        <div class="glass-card rounded-[32px] p-7 sm:p-9 border border-white/10 hover:border-indigo-400/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-indigo-600/30 border border-indigo-400/40 text-indigo-300 text-xs font-bold uppercase tracking-wider">
+                🛡️ Distributed Security & Backend
+              </span>
+              <span class="text-xs text-emerald-400 font-mono font-semibold flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Live on Render
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-indigo-300 transition-colors mb-3">
+              UPI MeshPay – Offline Payment Simulation
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+              A Java Spring Boot payment backend designed for offline store-and-forward transaction verification, state management, and tamper-proof peer-to-merchant settlements.
+            </p>
+
+            <div class="space-y-2.5 mb-7 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="text-indigo-400 shrink-0">▹</span>
+                <span>Military-grade cryptography using <strong class="text-white">RSA-2048 & AES-256-GCM</strong> encryption with <strong class="text-white">SHA-256</strong> hashing.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-indigo-400 shrink-0">▹</span>
+                <span>Anti-replay defense via <strong class="text-white">nonce synchronization</strong> and bounded timestamp expiry checks.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-indigo-400 shrink-0">▹</span>
+                <span>Spring Data JPA with persistent caching, Docker containerization, and live cloud deployment on Render.</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Java</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Spring Boot</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Spring Data JPA</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">RSA-2048 / AES-GCM</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Docker</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Render</span>
+            </div>
+          </div>
+
+          <!-- UPI MeshPay Actions: Render Live Link -->
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+            <a href="https://upi-meshpay.onrender.com/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs uppercase tracking-wider glow-button transition-all flex items-center gap-2">
+              <span>Live Demo (Render)</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal('upimeshpay')" class="px-3.5 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-semibold">
+                Specs
+              </button>
+              <a href="https://github.com/Sanjana27904/UPI-MeshPay" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-bold uppercase tracking-wider border border-white/10 hover:border-white/30 transition-all flex items-center gap-1.5">
+                <span>GitHub</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PROJECT 3: SMARTCIVIC ================= -->
+        <div class="glass-card rounded-[32px] p-7 sm:p-9 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-cyan-600/30 border border-cyan-400/40 text-cyan-300 text-xs font-bold uppercase tracking-wider">
+                🏛️ Civic AI & NLP Automation
+              </span>
+              <span class="text-xs text-emerald-400 font-mono font-semibold flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Live on Vercel
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-cyan-300 transition-colors mb-3">
+              SmartCivic – AI Smart Issue Resolution System
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+              An AI-powered public governance platform enabling citizens to report civic grievances (potholes, garbage, lighting) with real-time location mapping and automated NLP prioritization.
+            </p>
+
+            <div class="space-y-2.5 mb-7 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="text-cyan-400 shrink-0">▹</span>
+                <span>Implemented <strong class="text-white">NLP classification (TF-IDF & Stop-Word Filtering)</strong> to automatically sort and triage incoming municipal issues.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-cyan-400 shrink-0">▹</span>
+                <span>Built end-to-end complaint tracking workflow with status updates, geo-location data, and image attachments.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-cyan-400 shrink-0">▹</span>
+                <span>Accelerated municipal resolution response times by eliminating manual sorting backlogs.</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">JavaScript</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">NLP (TF-IDF)</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Python</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Node.js</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Firebase</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Vercel</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+            <a href="https://smartcivic-ai-based-smart-complaint.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs uppercase tracking-wider glow-button transition-all flex items-center gap-2">
+              <span>Live Demo</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal('smartcivic')" class="px-3.5 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-semibold">
+                Specs
+              </button>
+              <a href="https://github.com/Sanjana27904/SMARTCIVIC-AI-BASED-SMART-COMPLAINT-PUBLIC-ISSUE-RESOLUTION-SYSTEM" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-bold uppercase tracking-wider border border-white/10 hover:border-white/30 transition-all flex items-center gap-1.5">
+                <span>GitHub</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PROJECT 4: CHATGPT REVIEWS ANALYSIS ================= -->
+        <div class="glass-card rounded-[32px] p-7 sm:p-9 border border-white/10 hover:border-pink-400/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-pink-600/30 border border-pink-400/40 text-pink-300 text-xs font-bold uppercase tracking-wider">
+                📊 NLP Sentiment & Analytics
+              </span>
+              <span class="text-xs text-emerald-400 font-mono font-semibold flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Live on Streamlit
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-pink-300 transition-colors mb-3">
+              ChatGPT Reviews Analysis Dashboard
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+              An interactive data analytics and sentiment engineering platform analyzing thousands of ChatGPT user reviews to reveal satisfaction trends, correlation between ratings and polarity, and recurring user pain points.
+            </p>
+
+            <div class="space-y-2.5 mb-7 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="text-pink-400 shrink-0">▹</span>
+                <span>Applied <strong class="text-white">TextBlob polarity classification</strong> and <strong class="text-white">NLTK stop-word normalization</strong> across unstructured review corpora.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-pink-400 shrink-0">▹</span>
+                <span>Built interactive visualizations using <strong class="text-white">Plotly</strong> (ratings heatmaps, polarity vs review length, temporal distributions).</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-pink-400 shrink-0">▹</span>
+                <span>Deployed as an interactive cloud dashboard on <strong class="text-white">Streamlit Community Cloud</strong>.</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Python</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Streamlit</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">TextBlob</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">NLTK</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Pandas</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-200">Plotly</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+            <a href="https://chatgpt-reviews-analysis-fihttddkmyaznd9jsa9swe.streamlit.app/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs uppercase tracking-wider glow-button transition-all flex items-center gap-2">
+              <span>Launch App</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal('chatgpt')" class="px-3.5 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-semibold">
+                Specs
+              </button>
+              <a href="https://github.com/Sanjana27904/ChatGPT-Reviews-Analysis" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded-full glass-pill text-slate-300 hover:text-white text-xs font-bold uppercase tracking-wider border border-white/10 hover:border-white/30 transition-all flex items-center gap-1.5">
+                <span>GitHub</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION & CERTIFICATIONS (04 ACADEMICS) ==================== -->
+  <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#090615]/70 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-display font-black text-purple-400 text-sm tracking-widest uppercase">04 // ACADEMIC BACKGROUND & CERTIFICATIONS</span>
+        <span class="h-[1px] w-12 bg-purple-500/50"></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Formal Education -->
+        <div class="lg:col-span-6 space-y-6">
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-6">
+            Formal Education
+          </h2>
+
+          <!-- Malla Reddy University -->
+          <div class="p-6 rounded-3xl glass-card border border-white/10 relative overflow-hidden">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-400">2022 - 2026 • Undergraduate</span>
+                <h3 class="font-display font-bold text-xl text-white mt-1">Bachelor of Technology (B.Tech)</h3>
+                <p class="text-slate-300 text-sm">Computer Science and Engineering</p>
+                <p class="text-slate-400 text-xs mt-1">Malla Reddy University | Hyderabad, India</p>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="px-3 py-1.5 rounded-xl bg-purple-500/20 border border-purple-400/40 text-purple-300 font-display font-black text-lg">
+                  9.2 / 10
+                </span>
+                <div class="text-[10px] text-slate-400 uppercase font-semibold mt-1">CGPA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narayana Junior College -->
+          <div class="p-6 rounded-3xl glass-card border border-white/10 relative overflow-hidden">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-pink-400">2020 - 2022 • High School</span>
+                <h3 class="font-display font-bold text-xl text-white mt-1">Intermediate / Higher Secondary</h3>
+                <p class="text-slate-300 text-sm">MPC (Mathematics, Physics, Chemistry)</p>
+                <p class="text-slate-400 text-xs mt-1">Narayana Junior College | Hyderabad, India</p>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="px-3 py-1.5 rounded-xl bg-pink-500/20 border border-pink-400/40 text-pink-300 font-display font-black text-lg">
+                  9.8 / 10
+                </span>
+                <div class="text-[10px] text-slate-400 uppercase font-semibold mt-1">CGPA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leadership & Extra-curricular -->
+          <div class="p-6 rounded-3xl glass-card border border-white/10">
+            <h4 class="font-display font-bold text-base text-white mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              <span>Leadership & Extracurricular Impact</span>
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400">▹</span>
+                <span>Coordinated technical symposiums and university events involving <strong class="text-white">80+ participants</strong>, aligning volunteers and faculty teams.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400">▹</span>
+                <span>Delivered comprehensive technical documentation, sprint updates, and collaborative code walk-through presentations.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Right: Certifications & Industry Badges -->
+        <div class="lg:col-span-6 space-y-4">
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-6">
+            Certifications & Badges
+          </h2>
+
+          <div class="p-5 rounded-2xl glass-card border border-white/10 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shrink-0 font-display font-black text-lg">
+                IIT
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-base text-white">Programming in Java</h4>
+                <p class="text-xs text-slate-300">NPTEL (IIT Kharagpur)</p>
+                <span class="text-[11px] text-purple-300 font-mono">Issued May 2024</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/5 border border-white/10 text-slate-300">Verified</span>
+          </div>
+
+          <div class="p-5 rounded-2xl glass-card border border-white/10 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-400/40 flex items-center justify-center text-blue-300 shrink-0 font-display font-black text-lg">
+                C
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-base text-white">Introduction to Java</h4>
+                <p class="text-xs text-slate-300">Coursera</p>
+                <span class="text-[11px] text-purple-300 font-mono">Issued Apr 2024</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/5 border border-white/10 text-slate-300">Verified</span>
+          </div>
+
+          <div class="p-5 rounded-2xl glass-card border border-white/10 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 shrink-0 font-display font-black text-lg">
+                D
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-base text-white">Data Analytics Job Simulation</h4>
+                <p class="text-xs text-slate-300">Deloitte Australia (Forage)</p>
+                <span class="text-[11px] text-purple-300 font-mono">Completed Feb 2025</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/5 border border-white/10 text-slate-300">Simulation</span>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-gradient-to-r from-purple-900/30 to-indigo-900/30 border border-purple-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-6">
+            <div>
+              <div class="font-display font-bold text-white text-base">Want to review verified credentials?</div>
+              <p class="text-slate-400 text-xs">All certificates and marksheets are compiled in the PDF resume.</p>
+            </div>
+            <button onclick="openResumeModal()" class="px-5 py-2.5 rounded-full bg-white text-slate-950 font-bold text-xs uppercase tracking-wider glow-button-white hover:bg-slate-100 transition-all shrink-0">
+              Open Resume Modal
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION (05 CONNECT) ==================== -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-display font-black text-purple-400 text-sm tracking-widest uppercase">05 // GET IN TOUCH</span>
+        <span class="h-[1px] w-12 bg-purple-500/50"></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Direct Info -->
+        <div class="lg:col-span-5">
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Let's build something <span class="text-purple-400">remarkable</span>.
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed mb-8">
+            I am actively exploring entry-level roles, software engineering internships, and AI engineering opportunities. Feel free to connect directly via LinkedIn, email, or phone!
+          </p>
+
+          <div class="space-y-4">
+            <!-- LinkedIn Item -->
+            <div class="p-4 rounded-2xl glass-card border border-white/5 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-600/30 border border-blue-400/30 flex items-center justify-center text-blue-300">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-bold text-slate-400">LinkedIn</div>
+                  <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="text-sm font-semibold text-white hover:text-blue-300 transition-colors">sanjana-madishetti-759939336</a>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="p-2 rounded-lg hover:bg-white/10 text-blue-400 hover:text-white transition-colors" title="Open LinkedIn">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Email Item -->
+            <div class="p-4 rounded-2xl glass-card border border-white/5 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-600/30 border border-purple-400/30 flex items-center justify-center text-purple-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Email</div>
+                  <a href="mailto:sanjanamadishetti27@gmail.com" class="text-sm font-semibold text-white hover:text-purple-300 transition-colors">sanjanamadishetti27@gmail.com</a>
+                </div>
+              </div>
+              <button onclick="copyEmail()" class="p-2 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white transition-colors" title="Copy Email">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              </button>
+            </div>
+
+            <!-- Phone Item -->
+            <div class="p-4 rounded-2xl glass-card border border-white/5 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-600/30 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Phone</div>
+                  <a href="tel:+918309716327" class="text-sm font-semibold text-white hover:text-emerald-300 transition-colors">+91 8309716327</a>
+                </div>
+              </div>
+              <button onclick="copyPhone()" class="p-2 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white transition-colors" title="Copy Phone">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              </button>
+            </div>
+
+            <!-- GitHub Profile Item -->
+            <div class="p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-indigo-600/30 border border-indigo-400/30 flex items-center justify-center text-indigo-300">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase font-bold text-slate-400">GitHub Profile</div>
+                <a href="https://github.com/Sanjana27904" target="_blank" class="text-sm font-semibold text-white hover:text-purple-300 transition-colors">github.com/Sanjana27904</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Message Box -->
+        <div class="lg:col-span-7">
+          <form onsubmit="handleContactSubmit(event)" class="p-7 sm:p-9 rounded-[32px] glass-card border border-white/10 space-y-5">
+            <h3 class="font-display font-bold text-xl text-white">Send a Message</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                <input type="text" id="contactName" required placeholder="Recruiter / Collaborator" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400 focus:outline-none text-white text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Email</label>
+                <input type="email" id="contactEmail" required placeholder="recruiter@company.com" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400 focus:outline-none text-white text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Subject / Role</label>
+              <input type="text" id="contactSubject" required placeholder="Junior Software Engineer Opportunity / Project Inquiry" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400 focus:outline-none text-white text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Hi Sanjana, we loved your work on Reflekt AI, SmartCivic, and ChatGPT Analysis..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400 focus:outline-none text-white text-sm resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm tracking-wide glow-button transition-all flex items-center justify-center gap-2">
+              <span>Send Message</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </button>
+            <p id="contactStatus" class="hidden text-xs text-center text-emerald-400 font-semibold"></p>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-8 px-4 border-t border-white/10 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="font-display font-bold text-slate-300">SANJANA MADISHETTI</span> • Portfolio 2026
+      </div>
+      <div>
+        Designed with Modern Glassmorphism & AI-Assisted Architecture
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/Sanjana27904" target="_blank" class="text-purple-400 hover:underline">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== RESUME MODAL ==================== -->
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass-card rounded-3xl border border-white/20 p-6 sm:p-8 shadow-2xl">
+      
+      <button onclick="closeResumeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+        ✕
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-3 h-3 rounded-full bg-purple-400"></span>
+        <span class="text-xs font-mono uppercase tracking-wider text-purple-300">Curriculum Vitae</span>
+      </div>
+
+      <h3 class="font-display font-black text-2xl text-white mb-1">SANJANA MADISHETTI</h3>
+      <p class="text-xs text-slate-300 mb-4">Junior Developer | AI-Assisted Development | Software Engineering</p>
+
+      <div class="p-4 rounded-2xl bg-white/5 border border-white/5 text-xs text-slate-300 leading-relaxed mb-5">
+        <strong class="text-white block mb-1">Professional Summary:</strong>
+        Computer Science Engineering graduate with a strong foundation in Java, Python, object-oriented programming, SQL, and web development fundamentals. Hands-on experience building functional AI-powered applications across conversational LLMs (Reflekt AI), offline cryptography (UPI MeshPay on Render), public issue tracking (SmartCivic), and sentiment analysis (ChatGPT Reviews).
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 mb-5 text-xs">
+        <div class="p-3 rounded-xl bg-white/5">
+          <span class="text-slate-400 block">LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/sanjana-madishetti-759939336/" target="_blank" class="text-blue-400 font-medium">View LinkedIn Profile ↗</a>
+        </div>
+        <div class="p-3 rounded-xl bg-white/5">
+          <span class="text-slate-400 block">Email:</span>
+          <span class="text-purple-300 font-medium">sanjanamadishetti27@gmail.com</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white/5">
+          <span class="text-slate-400 block">Phone:</span>
+          <span class="text-purple-300 font-medium">+91 8309716327</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white/5">
+          <span class="text-slate-400 block">B.Tech CGPA:</span>
+          <span class="text-white font-medium">9.2 / 10 (Malla Reddy Univ)</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <a href="assets/Sanjana_Madishetti_Resume.pdf" download="Sanjana_Madishetti_Resume.pdf" class="flex-1 py-3 rounded-xl bg-white text-slate-950 font-bold text-xs uppercase tracking-wider text-center glow-button-white hover:bg-slate-100 transition-all flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span>Download PDF Copy</span>
+        </a>
+        <button onclick="closeResumeModal()" class="px-5 py-3 rounded-xl glass-pill text-slate-300 hover:text-white text-xs font-semibold">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass-card rounded-3xl border border-white/20 p-6 sm:p-8 shadow-2xl">
+      
+      <button onclick="closeProjectModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+        ✕
+      </button>
+
+      <div id="projectModalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    let isAiAvatar = true;
+
+    function setAvatarMode(mode) {
+      const avatarImg = document.getElementById('avatarImage');
+      const realPhotoImg = document.getElementById('realPhotoImage');
+      const badgeLabel = document.getElementById('avatarBadgeLabel');
+      const btnAi = document.getElementById('btnAiAvatar');
+      const btnReal = document.getElementById('btnRealPhoto');
+      const navText = document.getElementById('navAvatarText');
+
+      if (mode === 'ai') {
+        isAiAvatar = true;
+        avatarImg.classList.remove('hidden');
+        realPhotoImg.classList.add('hidden');
+        badgeLabel.textContent = '✨ 3D Avatar';
+        if (navText) navText.textContent = '✨ 3D Avatar';
+
+        btnAi.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 bg-purple-600 text-white shadow-[0_0_14px_rgba(168,85,247,0.5)]';
+        btnReal.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200';
+      } else {
+        isAiAvatar = false;
+        avatarImg.classList.add('hidden');
+        realPhotoImg.classList.remove('hidden');
+        badgeLabel.textContent = '📷 Real Photo';
+        if (navText) navText.textContent = '📷 Real Photo';
+
+        btnReal.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 bg-purple-600 text-white shadow-[0_0_14px_rgba(168,85,247,0.5)]';
+        btnAi.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200';
+      }
+    }
+
+    function toggleAvatarMode() {
+      setAvatarMode(isAiAvatar ? 'real' : 'ai');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function filterSkills(category) {
+      const cards = document.querySelectorAll('.skill-card');
+      const tabs = document.querySelectorAll('.skill-tab');
+
+      tabs.forEach(tab => {
+        tab.className = 'skill-tab px-3.5 py-1.5 rounded-full text-xs font-semibold glass-pill text-slate-300 hover:text-white';
+      });
+      event.target.className = 'skill-tab active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purple-600 text-white';
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openResumeModal() {
+      document.getElementById('resumeModal').classList.remove('hidden');
+    }
+
+    function closeResumeModal() {
+      document.getElementById('resumeModal').classList.add('hidden');
+    }
+
+    const projectData = {
+      reflekt: {
+        title: "Reflekt AI – AI-Powered Resume Assistant",
+        tag: "LLM Integration • Natural Language Parsing",
+        liveUrl: null,
+        repoUrl: "https://github.com/Sanjana27904/Reflekt-AI",
+        description: "Built to streamline technical recruitment by allowing interviewers and recruiters to ask granular questions about candidates' backgrounds in real time.",
+        architecture: [
+          "FastAPI Asynchronous Gateway: Exposes conversational endpoints with streaming response support.",
+          "Groq LLM Engine: Leverages high-throughput inference for near-instant responses with custom recruiter-focused system prompts.",
+          "PyPDF Parsing & Pydantic Validation: Extracts multi-page PDF documents and validates schema fields (skills, projects, timeline, education) before injecting context into the prompt.",
+          "React Interactive Client: Fluid chat interface with question suggestions and token usage indicators."
+        ],
+        technologies: ["Python 3.11+", "FastAPI", "Groq API", "PyPDF", "Pydantic", "React.js", "Antigravity AI Workflows"]
+      },
+      upimeshpay: {
+        title: "UPI MeshPay – Offline UPI Payment Simulation",
+        tag: "Distributed Systems • Cryptographic Security",
+        liveUrl: "https://upi-meshpay.onrender.com/",
+        repoUrl: "https://github.com/Sanjana27904/UPI-MeshPay",
+        description: "Simulates an offline peer-to-merchant payment network resilient against network blackouts and intermittent connectivity.",
+        architecture: [
+          "Cryptographic Assurance: End-to-end payload encryption using RSA-2048 and AES-256-GCM ensuring confidentiality across untrusted relays.",
+          "Anti-Replay & Double-Spend Defense: Strict SHA-256 transaction digest hashing, synchronized nonces, and bounded timestamp verification windows.",
+          "Store-and-Forward Settlement: Spring Boot service manages asynchronous settlement queues with Spring Data JPA and H2 database fallback.",
+          "Live Render Deployment: Containerized application verified live and serving REST transaction endpoints on Render."
+        ],
+        technologies: ["Java 17+", "Spring Boot 3", "Spring Data JPA", "Maven", "H2 Database", "Docker", "Render Cloud"]
+      },
+      smartcivic: {
+        title: "SmartCivic – AI-Based Public Complaint Resolution System",
+        tag: "Civic AI • NLP Automated Triage",
+        liveUrl: "https://smartcivic-ai-based-smart-complaint.vercel.app/",
+        repoUrl: "https://github.com/Sanjana27904/SMARTCIVIC-AI-BASED-SMART-COMPLAINT-PUBLIC-ISSUE-RESOLUTION-SYSTEM",
+        description: "A digital governance portal designed to empower citizens to report civic grievances (potholes, garbage dumping, faulty streetlights) with geo-location data, images, and automated triage.",
+        architecture: [
+          "NLP Triage Pipeline: Utilizes Term Frequency–Inverse Document Frequency (TF-IDF) and stop-word normalization to automatically classify complaints into relevant municipal departments.",
+          "Real-Time Resolution Tracking: Transparent status lifecycle tracking (Reported, In Review, In Progress, Resolved) directly accessible to citizens.",
+          "Geo-Location & Media Attachment: Citizens attach real-time photo evidence and location coordinates to accelerate municipal field dispatch.",
+          "Vercel Cloud Deployment: Fully deployed and publicly accessible single-page responsive web platform."
+        ],
+        technologies: ["JavaScript (ES6+)", "Python NLP", "TF-IDF Vectorization", "Node.js", "Firebase Database", "Vercel Hosting"]
+      },
+      chatgpt: {
+        title: "ChatGPT Reviews Analysis & Sentiment Dashboard",
+        tag: "Data Science • Sentiment Engineering",
+        liveUrl: "https://chatgpt-reviews-analysis-fihttddkmyaznd9jsa9swe.streamlit.app/",
+        repoUrl: "https://github.com/Sanjana27904/ChatGPT-Reviews-Analysis",
+        description: "An end-to-end sentiment analytics dashboard analyzing real-world user reviews of ChatGPT to discover satisfaction trends, correlation between ratings and polarity, and recurring user pain points.",
+        architecture: [
+          "Data Cleaning & Feature Engineering: Ingested textual review datasets, converted timestamps, handled missing values, and calculated review length metrics using Pandas.",
+          "Sentiment Classification: Applied TextBlob polarity scoring to segment feedback into Positive (>0.2), Neutral (-0.2 to 0.2), and Negative (<-0.2).",
+          "Interactive EDA & Visualizations: Built Plotly charts including Rating distributions, Monthly trends, Heatmaps for Sentiment vs Ratings, and Word Clouds.",
+          "Streamlit Cloud Deployment: Deployed on Streamlit Community Cloud with interactive filters for date ranges, rating buckets, and sentiment tags."
+        ],
+        technologies: ["Python", "Streamlit", "TextBlob", "NLTK", "Pandas", "NumPy", "Plotly", "WordCloud"]
+      }
+    };
+
+    function openProjectModal(key) {
+      const p = projectData[key];
+      if (!p) return;
+      const container = document.getElementById('projectModalContent');
+      
+      const liveBtnHtml = p.liveUrl 
+        ? `<a href="${p.liveUrl}" target="_blank" class="px-4 py-2 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs uppercase tracking-wider glow-button transition-all flex items-center gap-1.5">
+            <span>Open Live App</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+           </a>`
+        : '';
+
+      container.innerHTML = `
+        <span class="text-xs font-bold uppercase tracking-wider text-purple-400">${p.tag}</span>
+        <h3 class="font-display font-black text-2xl text-white mt-1 mb-3">${p.title}</h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-5">${p.description}</p>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200 mb-2">Technical Architecture:</h4>
+        <ul class="space-y-2 mb-6 text-xs sm:text-sm text-slate-300">
+          ${p.architecture.map(item => `<li class="flex items-start gap-2"><span class="text-purple-400">▹</span><span>${item}</span></li>`).join('')}
+        </ul>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200 mb-2">Tech Stack:</h4>
+        <div class="flex flex-wrap gap-1.5 mb-6">
+          ${p.technologies.map(t => `<span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-200 text-xs">${t}</span>`).join('')}
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-white/10">
+          <div class="flex items-center gap-2">
+            ${liveBtnHtml}
+            <a href="${p.repoUrl}" target="_blank" class="px-4 py-2 rounded-full glass-pill text-slate-300 hover:text-white font-bold text-xs uppercase tracking-wider border border-white/10 transition-all flex items-center gap-1.5">
+              <span>GitHub</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+          <button onclick="closeProjectModal()" class="px-4 py-2 rounded-full glass-pill text-slate-400 hover:text-white text-xs font-semibold">
+            Close
+          </button>
+        </div>
+      `;
+      document.getElementById('projectModal').classList.remove('hidden');
+    }
+
+    function closeProjectModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+    }
+
+    function copyEmail() {
+      navigator.clipboard.writeText('sanjanamadishetti27@gmail.com');
+      showToast('Email address copied to clipboard!');
+    }
+
+    function copyPhone() {
+      navigator.clipboard.writeText('+918309716327');
+      showToast('Phone number copied to clipboard!');
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const status = document.getElementById('contactStatus');
+      status.textContent = 'Thank you! Your message has been prepared. You can also reach Sanjana directly at sanjanamadishetti27@gmail.com.';
+      status.classList.remove('hidden');
+      setTimeout(() => {
+        e.target.reset();
+      }, 1000);
+    }
+
+    function showToast(msg) {
+      const div = document.createElement('div');
+      div.className = 'fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-full bg-purple-600 text-white font-bold text-xs shadow-2xl transition-all duration-300';
+      div.textContent = msg;
+      document.body.appendChild(div);
+      setTimeout(() => {
+        div.style.opacity = '0';
+        setTimeout(() => div.remove(), 300);
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
